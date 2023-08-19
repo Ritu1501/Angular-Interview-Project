@@ -1,0 +1,21 @@
+
+<div class="container text-center mt-5">
+<h4>Deposit Money</h4>
+    <form [formGroup]="atmForm">
+        <label for="amount">Enter Amount:</label> &nbsp;
+        <input type="number" id="amount"  formControlName="withDraw"> &nbsp;&nbsp;&nbsp;
+        <button (click)="deposit()">Deposit</button>
+        <br>
+        <br>
+        <h4>Withdraw Money</h4>
+        <label for="amount">Enter Amount:</label> &nbsp;
+        <input type="number" id="amount" formControlName="deposit"> &nbsp;&nbsp;&nbsp;
+        <button (click)="withdraw()">Withdraw</button>
+    </form>
+
+    
+<div  class="mt-3" *ngIf="message">{{ message }}</div>
+
+<div class="mt-3">Balance Amount is:{{balanceAmount}}</div>
+
+</div>
